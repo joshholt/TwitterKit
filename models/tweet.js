@@ -16,6 +16,8 @@
 TwitterKit.Tweet = SC.Record.extend(
 /** @scope TwitterKit.Tweet.prototype */ {
   
+  primaryKey: 'id',
+  
   // The user's avatar
   profileImageUrl: SC.Record.attr(String),
   // The user's handle
