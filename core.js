@@ -34,8 +34,6 @@ TwitterKit = SC.Object.create(
   NAMESPACE: 'TwitterKit',
   VERSION: '0.1.0',
   
-  // init UserDefaults
-  // userDefaults: SC.UserDefaults.create({ appDomain: "TwitterKitUserDefaults" }),
   
   // The Store for the TwitterKit framework.
   store: null,
@@ -83,9 +81,9 @@ TwitterKit = SC.Object.create(
     Initializes TwitterKit's UserDefaults for saved searches.
   */
   initializeUserDefaults: function() {
-    var hasUserDefaults = this.getPath('userDefaults.savedSearches');
+    var hasUserDefaults = SC.userDefaults.getPath('TwitterKitUserDefaults:savedSearches');
     if (!hasUserDefaults) {
-      this.get('userDefaults').defaults({
+      SC.userDefaults.defaults({
         "TwitterKitUserDefaults:savedSearches": [
           {"searchTerm":"sproutcore","unreadTweetsCount":10,"guid":1}
         ]
@@ -98,7 +96,7 @@ TwitterKit = SC.Object.create(
     Loads up the UserDefaults
   */
   loadUserDefaults: function() {
-    var json = this.getPath('userDefaults.savedSearches');
+    var json = SC.userDefaults.getPath('TwitterKitUserDefaults:savedSearches');
     var recs = eval(json);
     if (recs) {
       this.get('store').loadRecords(TwitterKit.Search,recs);
@@ -114,7 +112,7 @@ TwitterKit = SC.Object.create(
     if (!this.get('userDefaults')) return ;
     var recs = this.get('store').find(TwitterKit.Search).invoke('get','attributes');
     var str = SC.json.encode(recs);
-    this.setPath('userDefaults.savedSearches',str);
+    SC.userDefaults.writeDefault('userDefaults.savedSearches',str);
   },
   
   /*
