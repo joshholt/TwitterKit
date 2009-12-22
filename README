@@ -1,0 +1,29 @@
+=============================================================================
+Project:   TwitterKit
+Author:	   Joshua Holt
+=============================================================================
+
+---------------------TwitterKit----------------------------------------------
+
+What is TwitterKit?
+
+	TwitterKit is a library intended to be included in the frameworks
+	directory of a SproutCore application.
+	
+Plans:
+
+	TwitterKit will support Twitter's full and search APIs. Currently
+	only the search API is supported. I plan to support the full Twitter API
+	in the near future.
+	
+Usage:
+
+	1.) Include the TwitterKit framework as a prerequisite in your Buildfile.
+	2.) Use the TwitterKit controllers
+	4.) Go Twitter Crazy...
+
+More Documentation on the way...
+	
+==============================================================================
+The License is MIT, Go nuts!
+==============================================================================
