@@ -35,7 +35,7 @@ TwitterKit = SC.Object.create(
   VERSION: '0.1.0',
   
   // init UserDefaults
-  userDefaults: SC.UserDefaults.create({ appDomain: "TwitterKitUserDefaults" }),
+  // userDefaults: SC.UserDefaults.create({ appDomain: "TwitterKitUserDefaults" }),
   
   // The Store for the TwitterKit framework.
   store: null,
