@@ -83,11 +83,14 @@ TwitterKit = SC.Object.create(
     Initializes TwitterKit's UserDefaults for saved searches.
   */
   initializeUserDefaults: function() {
-    this.get('userDefaults').defaults({
-      "TwitterKitUserDefaults:savedSearches": [
-        {"searchTerm":"sproutcore","unreadTweetsCount":10,"guid":1}
-      ]
-    });
+    var hasUserDefaults = this.getPath('userDefaults.savedSearches');
+    if (!hasUserDefaults) {
+      this.get('userDefaults').defaults({
+        "TwitterKitUserDefaults:savedSearches": [
+          {"searchTerm":"sproutcore","unreadTweetsCount":10,"guid":1}
+        ]
+      });
+    }
     this.loadUserDefaults();
   },
   
