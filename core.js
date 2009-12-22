@@ -100,7 +100,7 @@ TwitterKit = SC.Object.create(
     if (recs) {
       this.get('store').loadRecords(TwitterKit.Search,recs);
       console.log('loaded data from UserDefaults');
-      TwitterKit.startApplication();
+      this.startTwitterKit();
     }
   },
   

@@ -95,3 +95,4 @@ TwitterKit.TwitterKitDataSource = SC.DataSource.extend(
 TwitterKit.initializeStore(TwitterKit.TwitterKitDataSource.create());
 
 // Initialize the TwitterKit User Defaults
+TwitterKit.initializeUserDefaults();
