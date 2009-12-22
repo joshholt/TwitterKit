@@ -112,7 +112,7 @@ TwitterKit = SC.Object.create(
     if (!this.get('userDefaults')) return ;
     var recs = this.get('store').find(TwitterKit.Search).invoke('get','attributes');
     var str = SC.json.encode(recs);
-    SC.userDefaults.writeDefault('userDefaults.savedSearches',str);
+    SC.userDefaults.writeDefault('TwitterKitUserDefaults:savedSearches',str);
   },
   
   /*
