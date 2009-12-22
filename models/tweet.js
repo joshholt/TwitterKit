@@ -19,7 +19,7 @@ TwitterKit.Tweet = SC.Record.extend(
   // The user's avatar
   profileImageUrl: SC.Record.attr(String),
   // The user's handle
-  fromUser: SC.Record.att(String),
+  fromUser: SC.Record.attr(String),
   // The user's ID
   fromUserId: SC.Record.attr(Number),
   // The recipent's ID
