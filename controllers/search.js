@@ -2,7 +2,7 @@
 // Project:   TwitterKit.searchController
 // ==========================================================================
 /*globals TwitterKit */
-
+sc_require('mixins/record_status');
 /** @class
 
   This Controller provides access to one saved search.
