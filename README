@@ -3,6 +3,24 @@ Project:   TwitterKit
 Author:	   Joshua Holt
 =============================================================================
 
+
+*****************************************************************************
+
+WARNING:
+
+	This was just ripped out of http://sc-twitapp.appspot.com and turned into
+	a framework and heavily modified.
+	
+	The usage of SC.UserDefaults in this framework is really wonky at the 
+	moment... I'm not quite sure why, but that's b/c it's a bit late to
+	figure out.
+	
+	If you see the error, let me know or fork away!!
+
+
+*****************************************************************************
+
+
 ---------------------TwitterKit----------------------------------------------
 
 What is TwitterKit?
